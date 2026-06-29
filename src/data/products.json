@@ -1,0 +1,702 @@
+[
+    {
+        "id": "SI-001",
+        "title": "Digital Analytical Balance",
+        "category": "Scientific Instruments",
+        "spec": "220g / 0.1mg Precision",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-002",
+        "title": "UV-VIS Spectrophotometer",
+        "category": "Scientific Instruments",
+        "spec": "190-1100nm Range",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-003",
+        "title": "High-Speed Benchtop Centrifuge",
+        "category": "Scientific Instruments",
+        "spec": "15,000 RPM / 24 x 1.5mL",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-004",
+        "title": "Vertical Pressure Steam Autoclave",
+        "category": "Scientific Instruments",
+        "spec": "50L / 134°C Max Temp",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-005",
+        "title": "Digital pH/Ion Meter",
+        "category": "Scientific Instruments",
+        "spec": "-2.000 to 20.000 pH range",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-006",
+        "title": "Magnetic Hotplate Stirrer",
+        "category": "Scientific Instruments",
+        "spec": "280°C / 1500 RPM",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-007",
+        "title": "CO2 Incubator",
+        "category": "Scientific Instruments",
+        "spec": "180L / Air-Jacketed",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-008",
+        "title": "Microplate Reader",
+        "category": "Scientific Instruments",
+        "spec": "8-channel / 405-750nm",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-009",
+        "title": "Ultrasonic Cleaning Bath",
+        "category": "Scientific Instruments",
+        "spec": "10L / 40kHz Frequency",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-010",
+        "title": "Forced Air Drying Oven",
+        "category": "Scientific Instruments",
+        "spec": "RT+10 to 300°C",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-011",
+        "title": "Rotary Evaporator",
+        "category": "Scientific Instruments",
+        "spec": "5L Vertical Glassware Set",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-012",
+        "title": "Vortex Mixer",
+        "category": "Scientific Instruments",
+        "spec": "3000 RPM Touch Mode",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-013",
+        "title": "Orbital Shaker",
+        "category": "Scientific Instruments",
+        "spec": "20-500 RPM Digital Control",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-014",
+        "title": "Conductivity Meter",
+        "category": "Scientific Instruments",
+        "spec": "0 to 200 mS/cm range",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-015",
+        "title": "Gel Electrophoresis System",
+        "category": "Scientific Instruments",
+        "spec": "Horizontal / 300V Power Supply",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-016",
+        "title": "Digital Thermostatic Water Bath",
+        "category": "Scientific Instruments",
+        "spec": "12L / 2-Hole Ring Cover",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-017",
+        "title": "Automatic Potentiometric Titrator",
+        "category": "Scientific Instruments",
+        "spec": "0.01mL Dispense Precision",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-018",
+        "title": "Flame Photometer",
+        "category": "Scientific Instruments",
+        "spec": "K, Na, Li, Ca Detection",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-019",
+        "title": "Refractometer",
+        "category": "Scientific Instruments",
+        "spec": "0-95% Brix Digital",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "SI-020",
+        "title": "Melting Point Apparatus",
+        "category": "Scientific Instruments",
+        "spec": "Visual / 300°C Limit",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-001",
+        "title": "Hydrochloric Acid 37%",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7647-01-0",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-002",
+        "title": "Acetone AR Grade",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 67-64-1",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-003",
+        "title": "Sodium Hydroxide Pellets",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 1310-73-2",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-004",
+        "title": "Methanol HPLC Grade",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 67-56-1",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-005",
+        "title": "Sulfuric Acid 98%",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7664-93-9",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-006",
+        "title": "Ethanol Absolute 99.9%",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 64-17-5",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-007",
+        "title": "Potassium Permanganate",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7722-64-7",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-008",
+        "title": "Silver Nitrate",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7761-88-8",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-009",
+        "title": "Chloroform AR Grade",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 67-66-3",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-010",
+        "title": "Ammonium Hydroxide 25%",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 1336-21-6",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-011",
+        "title": "Dichloromethane",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 75-09-2",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-012",
+        "title": "Copper(II) Sulfate Pentahydrate",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7758-99-8",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-013",
+        "title": "Phenolphthalein Indicator",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 77-09-8",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-014",
+        "title": "Sodium Chloride AR Grade",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7647-14-5",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-015",
+        "title": "Diethyl Ether",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 60-29-7",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-016",
+        "title": "Nitric Acid 69%",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7697-37-2",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-017",
+        "title": "Potassium Hydroxide Pellets",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 1310-58-3",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-018",
+        "title": "Magnesium Sulfate Anhydrous",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 7487-88-9",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-019",
+        "title": "Bromothymol Blue",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 76-59-5",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LC-020",
+        "title": "Toluene AR Grade",
+        "category": "Laboratory Chemicals",
+        "spec": "CAS: 108-88-3",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-001",
+        "title": "Volumetric Flask, Class A",
+        "category": "Glassware",
+        "spec": "1000mL Capacity",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-002",
+        "title": "Graduated Cylinder, Borosilicate",
+        "category": "Glassware",
+        "spec": "250mL / 2mL Div",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-003",
+        "title": "Glass Burette with PTFE Stopcock",
+        "category": "Glassware",
+        "spec": "50mL / 0.1mL Div",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-004",
+        "title": "Erlenmeyer Flask, Wide Mouth",
+        "category": "Glassware",
+        "spec": "500mL Capacity",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-005",
+        "title": "Soxhlet Extractor Set",
+        "category": "Glassware",
+        "spec": "250mL Flask / 45/40 Joint",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-006",
+        "title": "Liebig Condenser",
+        "category": "Glassware",
+        "spec": "400mm Jacket Length",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-007",
+        "title": "Round Bottom Boiling Flask",
+        "category": "Glassware",
+        "spec": "1000mL / 24/40 Joint",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-008",
+        "title": "Beaker, Low Form",
+        "category": "Glassware",
+        "spec": "600mL Heavy Duty",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-009",
+        "title": "Separatory Funnel, Pear Shape",
+        "category": "Glassware",
+        "spec": "500mL / PTFE Plug",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-010",
+        "title": "Glass Petri Dish",
+        "category": "Glassware",
+        "spec": "100mm Diameter x 15mm",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-011",
+        "title": "Volumetric Pipette",
+        "category": "Glassware",
+        "spec": "25mL Class A",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-012",
+        "title": "Graham Condenser",
+        "category": "Glassware",
+        "spec": "300mm Coiled Tube",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-013",
+        "title": "Filtering Flask with Side Arm",
+        "category": "Glassware",
+        "spec": "1000mL Borosilicate",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-014",
+        "title": "Desiccator with Porcelain Plate",
+        "category": "Glassware",
+        "spec": "250mm ID Vacuum Type",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-015",
+        "title": "Reagent Bottle, Amber Glass",
+        "category": "Glassware",
+        "spec": "250mL Narrow Mouth",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-016",
+        "title": "Watch Glass",
+        "category": "Glassware",
+        "spec": "120mm Diameter",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-017",
+        "title": "Glass Funnel, 60 Degree",
+        "category": "Glassware",
+        "spec": "100mm Diameter / Long Stem",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-018",
+        "title": "Test Tube, Rimless",
+        "category": "Glassware",
+        "spec": "25 x 150mm / Borosilicate",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-019",
+        "title": "Distilling Column, Vigreux",
+        "category": "Glassware",
+        "spec": "300mm / 24/40 Joints",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "GW-020",
+        "title": "Crucible Adapter Set",
+        "category": "Glassware",
+        "spec": "Set of 7 Neoprene",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-001",
+        "title": "Buchner Filter Funnel",
+        "category": "Porcelain Ware",
+        "spec": "110mm Plate Diameter",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-002",
+        "title": "Crucible with Cover, High Form",
+        "category": "Porcelain Ware",
+        "spec": "50mL Capacity",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-003",
+        "title": "Mortar and Pestle",
+        "category": "Porcelain Ware",
+        "spec": "150mm ID / Glazed",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-004",
+        "title": "Evaporating Dish",
+        "category": "Porcelain Ware",
+        "spec": "125mL Round Bottom",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-005",
+        "title": "Gooch Filter Crucible",
+        "category": "Porcelain Ware",
+        "spec": "30mL / Perforated Bottom",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-006",
+        "title": "Porcelain Combustion Boat",
+        "category": "Porcelain Ware",
+        "spec": "90mm Length / Unglazed",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-007",
+        "title": "Spotting Plate",
+        "category": "Porcelain Ware",
+        "spec": "12 Wells / Glazed",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-008",
+        "title": "Hirsch Funnel",
+        "category": "Porcelain Ware",
+        "spec": "40mm Top Diameter",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-009",
+        "title": "Porcelain Spatula",
+        "category": "Porcelain Ware",
+        "spec": "200mm Long / Double End",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-010",
+        "title": "Casserole with Handle",
+        "category": "Porcelain Ware",
+        "spec": "140mL Capacity",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-011",
+        "title": "Pestle for Mortar",
+        "category": "Porcelain Ware",
+        "spec": "Replacement / 150mm Mortar",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-012",
+        "title": "Unglazed Porcelain Crucible",
+        "category": "Porcelain Ware",
+        "spec": "25mL Low Form",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-013",
+        "title": "Desiccator Plate",
+        "category": "Porcelain Ware",
+        "spec": "190mm / Perforated",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-014",
+        "title": "Büchner Funnel, Large",
+        "category": "Porcelain Ware",
+        "spec": "200mm Plate Diameter",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-015",
+        "title": "Crucible Lid Only",
+        "category": "Porcelain Ware",
+        "spec": "Fits 50mL High Form",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-016",
+        "title": "Evaporating Dish, Flat Bottom",
+        "category": "Porcelain Ware",
+        "spec": "90mm Diameter",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-017",
+        "title": "Combustion Tube",
+        "category": "Porcelain Ware",
+        "spec": "500mm x 25mm Unglazed",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-018",
+        "title": "Filter Disc",
+        "category": "Porcelain Ware",
+        "spec": "60mm Porous Ceramic",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-019",
+        "title": "Incinerating Tray",
+        "category": "Porcelain Ware",
+        "spec": "100 x 60 x 15mm",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "PW-020",
+        "title": "Ball Mill Jar",
+        "category": "Porcelain Ware",
+        "spec": "1L Alumina Reinforced",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-001",
+        "title": "Digital Pipette Pump",
+        "category": "Laboratory Accessories",
+        "spec": "0.1 to 100mL Range",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-002",
+        "title": "Stainless Steel Micro Spatula",
+        "category": "Laboratory Accessories",
+        "spec": "150mm V-Spoon / Flat End",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-003",
+        "title": "Test Tube Rack",
+        "category": "Laboratory Accessories",
+        "spec": "40 Hole / 20mm Dia / Z-shape",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-004",
+        "title": "Bosshead, Heavy Duty",
+        "category": "Laboratory Accessories",
+        "spec": "Aluminium / Up to 16mm Rod",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-005",
+        "title": "Three-Finger Clamp",
+        "category": "Laboratory Accessories",
+        "spec": "PVC Coated / 360 Deg Swivel",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-006",
+        "title": "Rubber Stopper Set",
+        "category": "Laboratory Accessories",
+        "spec": "Sizes #00 to #10 (Solid)",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-007",
+        "title": "Universal Stand Base",
+        "category": "Laboratory Accessories",
+        "spec": "Cast Iron / 200 x 125mm",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-008",
+        "title": "Support Rod",
+        "category": "Laboratory Accessories",
+        "spec": "Stainless Steel / 600mm Long",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-009",
+        "title": "Pipette Filler, Bulb Type",
+        "category": "Laboratory Accessories",
+        "spec": "3-Valve / Natural Rubber",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-010",
+        "title": "Magnetic Stir Bar Set",
+        "category": "Laboratory Accessories",
+        "spec": "7 Piece / PTFE Coated / Pivot Ring",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-011",
+        "title": "Crucible Tongs",
+        "category": "Laboratory Accessories",
+        "spec": "Stainless Steel / 250mm Long",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-012",
+        "title": "Burette Clamp, Double",
+        "category": "Laboratory Accessories",
+        "spec": "Spring Loaded / Plastic Jaws",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-013",
+        "title": "Beaker Tongs",
+        "category": "Laboratory Accessories",
+        "spec": "Plastic Coated Jaws / 300mm",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-014",
+        "title": "Tubing, Silicone",
+        "category": "Laboratory Accessories",
+        "spec": "8mm ID x 12mm OD / 5m Roll",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-015",
+        "title": "Test Tube Brush",
+        "category": "Laboratory Accessories",
+        "spec": "Nylon Bristles / 200mm Long",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-016",
+        "title": "Wash Bottle",
+        "category": "Laboratory Accessories",
+        "spec": "500mL LDPE / Narrow Mouth",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-017",
+        "title": "Iron Ring with Bosshead",
+        "category": "Laboratory Accessories",
+        "spec": "100mm Diameter / Extension Arm",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-018",
+        "title": "Wire Gauze with Ceramic Center",
+        "category": "Laboratory Accessories",
+        "spec": "150 x 150mm",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-019",
+        "title": "Bunsen Burner",
+        "category": "Laboratory Accessories",
+        "spec": "Natural Gas / Air Regulator",
+        "price": "Check with Procurement"
+    },
+    {
+        "id": "LA-020",
+        "title": "Tripod Stand",
+        "category": "Laboratory Accessories",
+        "spec": "150mm High / Zinc Plated",
+        "price": "Check with Procurement"
+    }
+]

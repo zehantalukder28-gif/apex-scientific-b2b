@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1001,
+    "title": "High-Performance Liquid Chromatograph (HPLC)",
+    "category": "instruments",
+    "image": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=800",
+    "spec": "Analytical Grade, Dual Pump",
+    "description": "Precision liquid chromatography system for complex mixture separation and quantification in pharmaceutical quality control."
+  },
+  {
+    "id": 2045,
+    "title": "Sulfuric Acid (H2SO4) - 98%",
+    "category": "chemicals",
+    "image": "https://images.unsplash.com/photo-1603126857599-f6e15782f615?auto=format&fit=crop&q=80&w=800",
+    "spec": "ACS Reagent Grade, 2.5L",
+    "description": "High-purity sulfuric acid suitable for strict laboratory analysis and industrial chemical synthesis."
+  },
+  {
+    "id": 3012,
+    "title": "Borosilicate Volumetric Flask",
+    "category": "glassware",
+    "image": "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&q=80&w=800",
+    "spec": "Class A, 500ml, PTFE Stopper",
+    "description": "Premium thermal-shock resistant volumetric flask certified for exact dilution and standard solution preparation."
+  },
+  {
+    "id": 4088,
+    "title": "Industrial Evaporating Dish",
+    "category": "porcelain",
+    "image": "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
+    "spec": "Glazed Porcelain, 200ml",
+    "description": "High-temperature resistant porcelain evaporating dish for concentrating solutions and burning solids."
+  }
+]

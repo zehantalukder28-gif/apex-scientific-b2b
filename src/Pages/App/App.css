@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════
+   APEX SCIENTIFIC — Global Design System
+   ═══════════════════════════════════════════════ */
+
+* {
+  cursor: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* Hide default cursor globally for custom cursor */
+a, button, [role="button"], input, textarea, select, label {
+  cursor: none !important;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(29, 78, 216, 0.15);
+  color: #0f172a;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ═══════════════════════════════════════════════
+   Preloader fill-up text animation
+   ═══════════════════════════════════════════════ */
+@keyframes fillUp {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.text-fill-up {
+  background: linear-gradient(to right, #1d4ed8 50%, transparent 50%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #1e293b;
+  animation: fillUp 2.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.text-fill-up-done {
+  -webkit-text-stroke: 0px transparent;
+}
+
+/* ═══════════════════════════════════════════════
+   Legacy animation compat
+   ═══════════════════════════════════════════════ */
+@keyframes smoothFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: smoothFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ═══════════════════════════════════════════════
+   Geometric ring motif for Hero
+   ═══════════════════════════════════════════════ */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+.animate-spin-reverse {
+  animation: spinReverse 25s linear infinite;
+}
+
+/* ═══════════════════════════════════════════════
+   Glowing text hover for nav links
+   ═══════════════════════════════════════════════ */
+.glow-hover {
+  transition: color 0.3s ease, filter 0.3s ease, text-shadow 0.3s ease;
+}
+.glow-hover:hover {
+  color: #3b82f6;
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.6), 0 0 24px rgba(59, 130, 246, 0.3);
+}
