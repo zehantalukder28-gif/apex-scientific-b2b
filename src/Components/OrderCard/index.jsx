@@ -20,17 +20,17 @@ const OrderCard = props => {
     const activeCategory = props?.category;
 
     return (
-        <div className="flex justify-between items-center mb-3">
-            <div className="flex items-center gap-2">
-                <figure className="w-20 h-20">
-                    <img className="w-full h-full rounded-lg object-cover"
-                    src={finalImage || imageMap[String(activeCategory).toUpperCase().trim()] || "https://images.unsplash.com/photo-1532187863486-abf9d39d6618?w=400&q=80"}
-                    alt={title} />
-                </figure>
-                <p className="text-sm font-light">{title}</p>
+        <div className="flex items-center gap-3 mb-4 w-full bg-white p-2 rounded-lg border border-slate-100 shadow-sm">
+            <figure className="w-16 h-16 shrink-0">
+                <img className="w-full h-full rounded-md object-cover border border-slate-200"
+                src={finalImage || imageMap[String(activeCategory).toUpperCase().trim()] || "https://images.unsplash.com/photo-1532187863486-abf9d39d6618?w=400&q=80"}
+                alt={title} />
+            </figure>
+            <div className="flex flex-col flex-1 min-w-0 justify-center">
+                <p className="text-sm font-medium text-slate-800 leading-tight truncate mb-1" title={title}>{title}</p>
+                <p className="text-xs font-bold text-slate-500">{price}</p>
             </div>
-            <div className=" flex items-center gap-2">
-                <p className="text-lg font-medium">{price}</p>
+            <div className="shrink-0 ml-1 flex items-center justify-center pr-1">
                 {renderXMarkIcon}
             </div>
         </div>

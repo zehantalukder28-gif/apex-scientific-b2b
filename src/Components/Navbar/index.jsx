@@ -38,6 +38,7 @@ const Navbar = () => {
     }
     const query = searchQuery.toLowerCase()
     const results = (context.items || []).filter(item => 
+      item.name?.toLowerCase().includes(query) ||
       item.title?.toLowerCase().includes(query) ||
       item.category?.toLowerCase().includes(query) ||
       String(item.id).includes(query)
@@ -131,8 +132,7 @@ const Navbar = () => {
                             key={item.id}
                             onClick={() => {
                               setSearchQuery('')
-                              context.openProductDetail()
-                              context.setProductToShow(item)
+                              window.location.href = `/product/${item.id}`
                             }}
                             className="flex items-center gap-4 p-3 hover:bg-blue-50 transition-colors cursor-pointer border-b border-slate-100 last:border-b-0 group"
                           >
@@ -140,7 +140,7 @@ const Navbar = () => {
                               <img src={item.image || 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100'} alt="" className="max-w-full max-h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300" />
                             </div>
                             <div className="flex flex-col">
-                              <span className="text-xs font-semibold text-slate-900 line-clamp-1">{item.title}</span>
+                              <span className="text-xs font-semibold text-slate-900 line-clamp-1">{item.name || item.title}</span>
                               <span className="text-[9px] text-slate-400 font-bold tracking-widest uppercase mt-0.5">{item.category}</span>
                             </div>
                           </div>
@@ -165,19 +165,17 @@ const Navbar = () => {
               <Search className="w-[18px] h-[18px]" strokeWidth={2} />
             </button>
 
-            {context.isUserAuthenticated && (
-              <button 
-                className='cursor-interact relative flex items-center p-1 text-slate-600 hover:text-blue-600 transition-colors' 
-                onClick={() => context.openCheckoutSideMenu()}
-              >
-                <ShoppingCart className='w-[18px] h-[18px]' strokeWidth={2} />
-                {context.cartProducts.length > 0 && (
-                  <span className='absolute -top-1 -right-1 flex justify-center items-center bg-blue-600 text-white rounded-full w-4 h-4 text-[9px] font-bold'>
-                    {context.cartProducts.length}
-                  </span>
-                )}
-              </button>
-            )}
+            <button 
+              className='cursor-interact relative flex items-center p-1 text-slate-600 hover:text-blue-600 transition-colors' 
+              onClick={() => context.openCheckoutSideMenu()}
+            >
+              <ShoppingCart className='w-[18px] h-[18px]' strokeWidth={2} />
+              {context.cartProducts.length > 0 && (
+                <span className='absolute -top-1 -right-1 flex justify-center items-center bg-blue-600 text-white rounded-full w-4 h-4 text-[9px] font-bold'>
+                  {context.cartProducts.length}
+                </span>
+              )}
+            </button>
             
             <div className="hidden sm:block h-5 w-px bg-slate-200" />
 
@@ -229,8 +227,7 @@ const Navbar = () => {
                             onClick={() => {
                               setSearchQuery('')
                               setIsMobileSearchOpen(false)
-                              context.openProductDetail()
-                              context.setProductToShow(item)
+                              window.location.href = `/product/${item.id}`
                             }}
                             className="flex items-center gap-4 p-4 hover:bg-blue-50 transition-colors cursor-pointer border-b border-slate-100 last:border-b-0 group"
                           >
@@ -238,7 +235,7 @@ const Navbar = () => {
                               <img src={item.image || 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100'} alt="" className="max-w-full max-h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="flex flex-col">
-                              <span className="text-sm font-semibold text-slate-900 line-clamp-1">{item.title}</span>
+                              <span className="text-sm font-semibold text-slate-900 line-clamp-1">{item.name || item.title}</span>
                               <span className="text-[10px] text-slate-400 font-bold tracking-widest uppercase mt-0.5">{item.category}</span>
                             </div>
                           </div>

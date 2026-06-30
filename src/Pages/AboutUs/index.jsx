@@ -26,11 +26,11 @@ const AboutUs = () => {
                     {/* Image Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
                         <div className="bg-slate-100 aspect-[4/3] rounded-sm overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80" alt="Laboratory Operations" className="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-700" />
+                            <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&w=800&q=80" alt="Laboratory Operations" className="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-700" />
                         </div>
                         <div className="grid grid-rows-2 gap-6">
                             <div className="bg-slate-100 rounded-sm overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&w=800&q=80" alt="Precision Instruments" className="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-700" />
+                                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="Precision Instruments" className="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div className="bg-slate-100 rounded-sm overflow-hidden">
                                 <img src="https://images.unsplash.com/photo-1617155093730-a8bf47be792d?auto=format&fit=crop&w=800&q=80" alt="Chemical Synthesis" className="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-700" />

@@ -1,5 +1,5 @@
 import { useContext, useState, useCallback, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion'
 import { ArrowRight, Scale, FileText, ShieldCheck, FlaskConical } from 'lucide-react'
 import Layout from '../../Components/Layout'
@@ -25,7 +25,7 @@ const CardSkeleton = () => (
 // ═══════════════════════════════════════════════
 // Product Card with glow hover & float
 // ═══════════════════════════════════════════════
-const ProductCard = ({ item, context, imgSrc, index }) => (
+const ProductCard = ({ item, context, imgSrc, index, navigate }) => (
   <motion.div
     layout
     initial={{ opacity: 0, y: 30 }}
@@ -39,8 +39,8 @@ const ProductCard = ({ item, context, imgSrc, index }) => (
     }}
     className="cursor-interact group flex flex-col bg-white border border-slate-200 rounded-sm overflow-hidden hover:border-blue-200/50"
     onClick={() => {
-      // Using window.location.href as a simple navigation since we are not passing navigate down
-      window.location.href = `/product/${item.id}`;
+      // Using useNavigate to prevent full page reload
+      navigate(`/product/${item.id}`);
     }}
   >
     {/* Image */}
@@ -253,6 +253,7 @@ const ScrollLinkedOrb = () => {
 // ═══════════════════════════════════════════════
 function Home() {
   const context = useContext(ShoppingCartContext)
+  const navigate = useNavigate()
   const [heroCategory, setHeroCategory] = useState('Scientific Instruments')
 
   const activeCategory = heroCategory;
@@ -260,7 +261,7 @@ function Home() {
 
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
     handleResize(); // Initial check
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -291,40 +292,19 @@ function Home() {
 
   const allItems = context.items || [];
 
-  // Decide which category filter to apply
+  // Apply category filtering
   const currentCategory = context.searchByCategory || activeCategory;
+  let displayProducts = allItems;
 
-  let result = allItems;
-
-  // Filter by category
-  if (currentCategory !== 'All Products') {
-    result = result.filter(item => matchCategory(item.category, currentCategory));
+  if (currentCategory && currentCategory !== 'All Products') {
+    displayProducts = allItems.filter(item => matchCategory(item.category, currentCategory));
   }
 
-  // Filter by search term
-  if (context.searchByTitle) {
-    const lowerSearch = context.searchByTitle.toLowerCase();
-    result = result.filter(item =>
-      item?.name?.toLowerCase().includes(lowerSearch) ||
-      item?.title?.toLowerCase().includes(lowerSearch) ||
-      item?.description?.toLowerCase().includes(lowerSearch) ||
-      item?.spec?.toLowerCase().includes(lowerSearch)
-    );
+  // If we are showing 'All Products', maybe just show the first 16 to prevent massive DOM overload, 
+  // but if we are filtering by a specific category, show all matches for that category.
+  if (currentCategory === 'All Products') {
+    displayProducts = displayProducts.slice(0, 16);
   }
-
-  // Sort results
-  if (context.sortBy) {
-    result = [...result];
-    if (context.sortBy === 'price-asc') {
-      result.sort((a, b) => (typeof a.price === 'number' ? a.price : 0) - (typeof b.price === 'number' ? b.price : 0));
-    } else if (context.sortBy === 'price-desc') {
-      result.sort((a, b) => (typeof b.price === 'number' ? b.price : 0) - (typeof a.price === 'number' ? a.price : 0));
-    } else if (context.sortBy === 'name-asc') {
-      result.sort((a, b) => (a.name || a.title || '').localeCompare(b.name || b.title || ''));
-    }
-  }
-
-  const displayProducts = result;
 
   const handleCategoryChange = useCallback((cat) => {
     setHeroCategory(cat);
@@ -345,6 +325,7 @@ function Home() {
           context={context}
           imgSrc={getCategoryImage(item)}
           index={idx}
+          navigate={navigate}
         />
       ));
     }
@@ -424,7 +405,7 @@ function Home() {
         {/* ═══ SCROLL-LINKED MORPHING CATEGORY HEADER ═══ */}
         <motion.div
           style={{ y: smoothY, zIndex: 10 }}
-          className="md:absolute static md:left-12 lg:left-16 xl:left-[calc(50%-750px)] md:top-[60vh] pointer-events-none w-full max-w-lg lg:max-w-xl text-left mt-12 mb-6 md:mt-0 md:mb-0 px-6 md:px-0"
+          className="lg:absolute static lg:left-16 xl:left-[calc(50%-750px)] lg:top-[60vh] pointer-events-none w-full max-w-lg lg:max-w-xl text-left mt-12 mb-6 lg:mt-0 lg:mb-0 px-6 md:px-12 lg:px-0 mx-auto"
         >
           <motion.div style={{ scale: smoothScale, opacity: opacityStartMorph, transformOrigin: 'top left' }} className="md:min-h-[150px] md:mb-8">
             <motion.span
@@ -469,32 +450,6 @@ function Home() {
       <Layout>
         <div className="w-full">
 
-          {/* ═══════════════════════════════════════════════
-              CATEGORY RIBBON
-              ═══════════════════════════════════════════════ */}
-          <section className="w-full max-w-[1600px] mx-auto px-6 md:px-12 py-12 border-b border-slate-200 relative z-10 bg-white">
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-              {[
-                { label: 'Instrumentation', count: '142 Items' },
-                { label: 'Reagents', count: '3,000+ Vials' },
-                { label: 'Volumetric', count: '850 Pieces' },
-                { label: 'Ceramics', count: '120 Styles' },
-                { label: 'Essentials', count: '12,000+ SKU' }
-              ].map((cat, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col items-center justify-center py-5 px-10 border border-slate-200 bg-slate-50/50 rounded-sm hover:border-blue-300 hover:shadow-sm transition-all duration-300 cursor-pointer"
-                  onClick={() => {
-                    const el = document.getElementById('products-catalog');
-                    el?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-slate-900 mb-1">{cat.label}</span>
-                  <span className="text-xs text-slate-400 font-medium">{cat.count}</span>
-                </div>
-              ))}
-            </div>
-          </section>
 
           {/* ═══════════════════════════════════════════════
               FEATURED INSTRUMENTS — Product Grid
@@ -504,47 +459,12 @@ function Home() {
               <div>
                 <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400 mb-3">
                   <span className="w-6 h-[1px] bg-cyan-500 inline-block" />
-                  Featured Selection
+                  Top Tier Equipment
                 </span>
                 <h2 className='font-extrabold text-4xl md:text-5xl tracking-tighter text-slate-900 leading-tight'>
-                  {context.searchByCategory || 'All Products'}
+                  Featured Products
                 </h2>
               </div>
-              <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
-                <input
-                  type="text"
-                  placeholder='Search catalog...'
-                  className='cursor-interact rounded-sm border border-slate-200 focus:border-cyan-500 bg-white w-full sm:w-64 p-3 text-sm focus:outline-none shadow-sm transition-colors'
-                  value={context.searchByTitle || ''}
-                  onChange={(e) => context.setSearchByTitle(e.target.value)}
-                />
-                <select
-                  className="cursor-interact rounded-sm border border-slate-200 focus:border-cyan-500 bg-white w-full sm:w-auto p-3 text-sm focus:outline-none shadow-sm transition-colors text-slate-700 font-medium"
-                  value={context.sortBy || ''}
-                  onChange={(e) => context.setSortBy(e.target.value)}
-                >
-                  <option value="">Sort By: Relevance</option>
-                  <option value="price-asc">Price: Low to High</option>
-                  <option value="price-desc">Price: High to Low</option>
-                  <option value="name-asc">Name: A - Z</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Category Pills Filter */}
-            <div className="flex flex-wrap items-center gap-2 mb-10">
-              {['All Products', 'Scientific Instruments', 'Laboratory Chemicals', 'Glassware', 'Porcelain Ware', 'Laboratory Accessories'].map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => context.setSearchByCategory(cat === 'All Products' ? null : cat)}
-                  className={`px-4 py-2 text-xs font-bold tracking-widest uppercase rounded-sm border transition-colors ${(context.searchByCategory === cat) || (!context.searchByCategory && cat === 'All Products')
-                      ? 'bg-slate-900 text-white border-slate-900'
-                      : 'bg-white text-slate-500 border-slate-200 hover:border-slate-400 hover:text-slate-900'
-                    }`}
-                >
-                  {cat}
-                </button>
-              ))}
             </div>
 
             <AnimatePresence mode="popLayout">
@@ -597,10 +517,9 @@ function Home() {
                 </div>
               </div>
 
-              {/* Right Column: Infrastructure Visual */}
               <div className="w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1200&q=80"
                   alt="Precision Distribution Facility"
                   className="w-full h-auto object-cover rounded-none grayscale-[20%] contrast-[105%]"
                 />

@@ -6,6 +6,7 @@ import { X, ArrowUpRight } from 'lucide-react';
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   const categories = [
+    { name: 'Full Catalog', path: '/category/all' },
     { name: 'Scientific Instruments', path: '/category/instruments' },
     { name: 'Laboratory Chemicals', path: '/category/chemicals' },
     { name: 'Glassware', path: '/category/glassware' },

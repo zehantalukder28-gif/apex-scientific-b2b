@@ -12,6 +12,7 @@ import SignUp from '../SignUp'
 import AboutUs from '../AboutUs'
 import Contact from '../Contact'
 import BrandsAndClients from '../BrandsAndClients'
+import CategoryPage from '../CategoryPage'
 import Navbar from '../../Components/Navbar'
 import CheckoutSideMenu from '../../Components/CheckoutSideMenu'
 import ProtectedRoute from '../../Components/ProtectedRoute'
@@ -22,11 +23,7 @@ import './App.css'
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
-    { path: '/category/instruments', element: <Home /> },
-    { path: '/category/chemicals', element: <Home /> },
-    { path: '/category/glassware', element: <Home /> },
-    { path: '/category/porcelain', element: <Home /> },
-    { path: '/category/accessories', element: <Home /> },
+    { path: '/category/:categoryId', element: <CategoryPage /> },
     { 
       path: '/my-account', 
       element: (

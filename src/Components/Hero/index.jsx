@@ -29,7 +29,7 @@ export const categories = [
     label: 'VOLUMETRIC',
     title: 'Precision\nGlassware',
     subtitle: 'Borosilicate vessels and volumetric apparatus designed for extreme thermal shock resistance.',
-    image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80',
     accent: '#0891b2',
   },
   {
@@ -38,7 +38,7 @@ export const categories = [
     label: 'CERAMICS',
     title: 'Porcelain\nWare',
     subtitle: 'Durable ceramic crucibles and evaporating dishes for high-temperature ashing and fusion protocols.',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80',
+    image: 'https://loremflickr.com/800/800/laboratory,ceramic?lock=15',
     accent: '#dc2626',
   },
   {
@@ -47,7 +47,7 @@ export const categories = [
     label: 'ESSENTIALS',
     title: 'Laboratory\nAccessories',
     subtitle: 'Essential consumables and precision tools that keep daily laboratory operations running flawlessly.',
-    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80',
+    image: 'https://loremflickr.com/800/800/laboratory,pipette?lock=16',
     accent: '#059669',
   },
 ];
@@ -122,9 +122,9 @@ const Hero = ({ onCategoryChange }) => {
   };
 
   return (
-    <section className="relative w-full h-auto min-h-0 py-4 md:min-h-screen md:h-auto bg-transparent overflow-hidden flex flex-col md:pt-16 mt-6 md:mt-0">
+    <section className="relative w-full h-auto min-h-0 py-4 lg:min-h-screen lg:h-auto bg-transparent overflow-hidden flex flex-col lg:pt-16 mt-6 lg:mt-0">
       {/* ═══ Main Content ═══ */}
-      <div className="relative z-10 flex-1 flex flex-col justify-between max-w-[1600px] mx-auto w-full px-6 md:px-16 pt-4 md:pt-32 pb-8">
+      <div className="relative z-10 flex-1 flex flex-col justify-between max-w-[1600px] mx-auto w-full px-6 md:px-16 pt-4 lg:pt-32 pb-8">
         
         {/* Top: Title + Central 3D Image */}
         <div className="flex-1 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16">
@@ -203,20 +203,16 @@ const Hero = ({ onCategoryChange }) => {
               <ChevronRight className="w-5 h-5" />
             </motion.button>
 
-            <div className="ml-4 flex items-center gap-3 text-xs font-mono tracking-widest text-slate-400">
-              <span className="font-bold text-slate-900">{current.id}</span>
-              <div className="w-24 h-[2px] bg-slate-100 rounded-full overflow-hidden">
-                <motion.div 
-                  className="h-full bg-blue-600 rounded-full" 
-                  animate={{ width: `${((currentIndex + 1) / categories.length) * 100}%` }}
-                  transition={{ duration: 0.4, ease: 'easeOut' }}
-                />
-              </div>
-              <span>05</span>
-            </div>
           </div>
 
           <div className="flex items-center gap-1 overflow-x-auto pb-2 md:pb-0">
+            <motion.button
+              onClick={() => onCategoryChange?.('All Products')}
+              whileHover={{ y: -2 }}
+              className="cursor-interact px-4 py-2.5 text-[10px] font-bold tracking-widest uppercase whitespace-nowrap transition-all duration-300 rounded-sm border bg-white text-slate-500 border-slate-200 hover:border-slate-400 hover:text-slate-800"
+            >
+              ALL PRODUCTS
+            </motion.button>
             {categories.map((cat, i) => (
               <motion.button
                 key={cat.id}
